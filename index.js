@@ -58,6 +58,7 @@ app.get('/repo-info', async (req, res) => {
         message: lastCommit.commit.message,
         author: lastCommit.commit.author.name,
         url: lastCommit.html_url,
+        date: lastCommit.commit.author.date, // ISO 8601 date format
     };
 
     // Total commits by each author
